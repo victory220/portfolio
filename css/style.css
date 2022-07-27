@@ -9,6 +9,8 @@ header {
   width: 100vw;
   height: 265px;
   position: relative;
+  margin-top: 56px;
+  margin-bottom: 50px;
 }
 
 .color-overlay {
@@ -34,6 +36,17 @@ h4 {
   line-height: 35px;
 }
 
+h3 {
+  font-size: 1.75rem;
+  margin-top: 8px;
+}
+
+.grid-images {
+  height: 20vw;
+  width: 50vw;
+  object-fit: cover;
+}
+
 @media (max-width: 576px) {
   header {
     max-height: 180px;
@@ -43,7 +56,14 @@ h4 {
     font-size: 3rem;
   }
 
+  h3,
   h4 {
     font-size: 1rem;
+  }
+
+  .grid-images {
+    height: 40vw;
+    width: 80vw;
+    object-fit: cover;
   }
 }
