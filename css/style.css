@@ -26,24 +26,36 @@ header {
 }
 
 h1,
+h2,
 h4 {
   font-weight: bold;
   text-align: center;
-  color: var(--header-text-color);
 }
 
 h1 {
   font-size: 4.5rem;
+  color: var(--header-text-color);
+}
+
+h2 {
+  font-size: 4rem;
+  color: var(--default-text-color);
 }
 
 h4 {
   font-size: 1.5rem;
   line-height: 35px;
+  color: var(--header-text-color);
 }
 
 h3 {
   font-size: 1.75rem;
   margin-top: 8px;
+  color: var(--default-text-color);
+}
+
+p {
+  font-size: 1.125rem;
   color: var(--default-text-color);
 }
 
@@ -53,12 +65,49 @@ footer {
   color: var(--default-text-color);
 }
 
+.about-h1 {
+  color: var(--default-text-color);
+  margin-top: 80px;
+  margin-bottom: 72px;
+}
+
+.about-h3 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--default-text-color);
+}
+.about-h4 {
+  color: var(--default-text-color);
+}
+
+.nav-link {
+  font-weight: bold;
+  color: var(--default-text-color);
+}
+
+.active {
+  color: #662eed !important;
+}
+
 .grid-images {
   height: 20vw;
   width: 50vw;
   object-fit: cover;
   display: block;
   margin: 10px auto;
+}
+
+.photo {
+  height: 450px;
+  width: 460px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.info {
+  width: 70%;
+  margin-bottom: 80px;
 }
 
 .brand-name {
@@ -79,6 +128,10 @@ footer {
     font-size: 3rem;
   }
 
+  h2 {
+    font-size: 2.5rem;
+  }
+
   h3,
   h4 {
     font-size: 1rem;
@@ -91,5 +144,9 @@ footer {
   .grid-images {
     height: 40vw;
     width: 80vw;
+  }
+
+  .info {
+    width: 90%;
   }
 }
