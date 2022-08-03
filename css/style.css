@@ -1,21 +1,24 @@
 :root {
   --default-text-color: #272142;
   --header-text-color: white;
+  --primary-color: #6c63ff;
+  --active-color: #662eed;
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 body {
   font-family: "Nunito", sans-serif;
 }
 
-header {
-  background-image: url("/images/bg.png");
+.hobby-header {
+  background-image: url("/images/bg.jpg");
   background-size: cover;
   background-position: center;
-  width: 100vw;
+  width: 100%;
   height: 265px;
   position: relative;
   margin-top: 56px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .color-overlay {
@@ -27,36 +30,34 @@ header {
 
 h1,
 h2,
+h3,
 h4 {
   font-weight: bold;
   text-align: center;
+  color: var(--default-text-color);
 }
 
 h1 {
-  font-size: 4.5rem;
-  color: var(--header-text-color);
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 4rem;
-  color: var(--default-text-color);
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 8px;
 }
 
 h4 {
   font-size: 1.5rem;
   line-height: 35px;
-  color: var(--header-text-color);
-}
-
-h3 {
-  font-size: 1.75rem;
-  margin-top: 8px;
-  color: var(--default-text-color);
 }
 
 p {
   font-size: 1.125rem;
-  color: var(--default-text-color);
+  text-indent: 1.5rem;
 }
 
 footer {
@@ -65,20 +66,36 @@ footer {
   color: var(--default-text-color);
 }
 
-.about-h1 {
-  color: var(--default-text-color);
-  margin-top: 80px;
-  margin-bottom: 72px;
+.hobby-header-text {
+  max-width: 90%;
+  color: var(--header-text-color);
 }
 
-.about-h3 {
-  font-size: 2.25rem;
-  font-weight: bold;
-  text-align: center;
-  color: var(--default-text-color);
+.custom-container {
+  margin-top: 100px;
+  width: 70%;
 }
-.about-h4 {
-  color: var(--default-text-color);
+
+.custom-container .row {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.launch-link {
+  margin: 10px;
+  border-radius: 4px;
+  padding: 20px 15px;
+  text-decoration: none;
+  text-transform: capitalize;
+  background: var(--primary-color);
+  box-shadow: var(--box-shadow);
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.launch-link:hover {
+  color: white;
+  background: #332bcf;
 }
 
 .nav-link {
@@ -87,27 +104,33 @@ footer {
 }
 
 .active {
-  color: #662eed !important;
+  color: var(--active-color) !important;
 }
 
-.grid-images {
-  height: 20vw;
-  width: 50vw;
+.hobby-grid-images {
+  height: 22vw;
+  width: 45vw;
   object-fit: cover;
   display: block;
-  margin: 10px auto;
+  margin: 30px auto 10px auto;
 }
 
-.photo {
+.main-photo {
   height: 450px;
-  width: 460px;
+  width: 450px;
   object-fit: cover;
   border-radius: 12px;
 }
 
-.info {
-  width: 70%;
-  margin-bottom: 80px;
+.main-images {
+  height: 22vw;
+  margin: 15px 0;
+}
+
+.main-images img {
+  height: 100%;
+  border-radius: 10px;
+  object-fit: contain;
 }
 
 .brand-name {
@@ -119,34 +142,60 @@ footer {
   padding: 8px;
 }
 
-@media (max-width: 576px) {
-  header {
-    max-height: 180px;
-  }
+.contact-titles {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  text-indent: 0;
+  color: var(--active-color);
+}
 
+.contact-data {
+  text-align: center;
+  text-indent: 0;
+  color: var(--default-text-color);
+  margin-bottom: 20px;
+}
+
+.contact-data i {
+  position: relative;
+  top: 2px;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   h3,
   h4 {
+    font-size: 1.25rem;
+  }
+
+  p {
     font-size: 1rem;
+    margin-bottom: 0;
   }
 
-  h3 {
-    text-align: center;
+  .hobby-header {
+    max-height: 180px;
   }
 
-  .grid-images {
+  .hobby-grid-images {
     height: 40vw;
     width: 80vw;
   }
 
-  .info {
-    width: 90%;
+  .main-images {
+    height: auto;
+  }
+
+  .container-width-sm {
+    width: 85%;
   }
 }
