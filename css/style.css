@@ -3,6 +3,7 @@
   --header-text-color: white;
   --primary-color: #6c63ff;
   --active-color: #662eed;
+  --link-color: #9f9ce0;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -55,6 +56,14 @@ h4 {
   line-height: 35px;
 }
 
+h4 a {
+  color: var(--active-color);
+}
+
+h4 a:hover {
+  color: var(--link-color);
+}
+
 p {
   font-size: 1.125rem;
   text-indent: 1.5rem;
@@ -98,9 +107,21 @@ footer {
   background: #332bcf;
 }
 
+.navbar {
+  background: #f9f7fe !important;
+}
+
+.navbar-brand:hover {
+  color: var(--active-color);
+}
+
 .nav-link {
   font-weight: bold;
   color: var(--default-text-color);
+}
+
+.nav-link:hover {
+  color: var(--active-color);
 }
 
 .active {
@@ -138,8 +159,17 @@ footer {
   font-weight: bold;
 }
 
-.footer-logos i {
-  padding: 8px;
+.footer-logos a {
+  background: #e6e6fc;
+  padding: 10px 13.5px;
+  border-radius: 50%;
+  color: var(--default-text-color);
+  transition: all 150ms ease-in-out;
+}
+
+.footer-logos a:hover {
+  color: var(--header-text-color);
+  background: #9f9ce0;
 }
 
 .contact-titles {
